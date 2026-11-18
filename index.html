@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore mountain bike trails and help keep trail names and difficulty information useful."
+    />
+    <title>Mountain Bike Trail Map</title>
+  </head>
+  <body>
+    <calcite-shell content-behind>
+      <calcite-navigation slot="header">
+        <calcite-navigation-logo
+          slot="logo"
+          heading="Mountain Bike Trails"
+          description="Explore trails and contribute name and difficulty updates"
+          heading-level="1"
+        ></calcite-navigation-logo>
+      </calcite-navigation>
+      <calcite-shell-panel
+        id="details-shell-panel"
+        slot="panel-end"
+        display-mode="dock"
+      >
+        <calcite-panel heading="Trail details">
+          <calcite-action
+            id="close-details"
+            slot="header-actions-end"
+            icon="x"
+            text="Close trail details"
+          ></calcite-action>
+          <div class="trail-details-content">
+            <p id="trail-empty">Click a trail on the map to view it and submit updates.</p>
+            <div id="trail-details" hidden>
+              <h2 id="trail-name"></h2>
+              <p>
+                <strong>Difficulty</strong>
+                <span id="trail-difficulty"></span>
+              </p>
+              <calcite-button id="edit-trail" appearance="outline" hidden>
+                Submit an Update
+              </calcite-button>
+              <form id="trail-edit-form" hidden novalidate>
+                <calcite-label>
+                  Trail name
+                  <calcite-input-text
+                    id="edit-name"
+                    name="trail-name"
+                    autocomplete="off"
+                    required
+                  ></calcite-input-text>
+                </calcite-label>
+                <calcite-label>
+                  Difficulty
+                  <calcite-select
+                    id="edit-difficulty"
+                    name="difficulty"
+                    label="Difficulty"
+                  ></calcite-select>
+                </calcite-label>
+                <div id="edit-message" role="status" aria-live="polite"></div>
+                <div class="form-actions">
+                  <calcite-button
+                    id="reload-trail"
+                    type="button"
+                    appearance="outline"
+                    hidden
+                  >
+                    Reload current trail
+                  </calcite-button>
+                  <calcite-button id="save-edit" type="submit">
+                    Save changes
+                  </calcite-button>
+                  <calcite-button
+                    id="cancel-edit"
+                    type="button"
+                    appearance="outline"
+                  >
+                    Cancel
+                  </calcite-button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </calcite-panel>
+      </calcite-shell-panel>
+      <main class="map-workspace">
+        <arcgis-map aria-label="Mountain bike trail map" popup-disabled>
+          <arcgis-zoom slot="top-left"></arcgis-zoom>
+        </arcgis-map>
+        <calcite-action
+          id="open-details"
+          class="open-details"
+          icon="information"
+          text="Open trail details"
+          hidden
+        ></calcite-action>
+        <div id="app-status" class="app-status" role="status" aria-live="polite">
+          Starting trail map…
+        </div>
+      </main>
+    </calcite-shell>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

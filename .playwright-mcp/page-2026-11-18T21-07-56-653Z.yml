@@ -1,0 +1,28 @@
+- generic [ref=f2e2]:
+  - generic [ref=f2e11]:
+    - heading "Mountain Bike Trails" [level=1] [ref=f2e12]
+    - generic [ref=f2e13]: Explore trails and contribute name and difficulty updates
+  - generic [ref=f2e14]:
+    - main [ref=f2e16]:
+      - generic "Mountain bike trail map" [ref=f2e17]:
+        - generic [ref=f2e19]:
+          - application [ref=f2e20]
+          - generic [ref=f2e22]:
+            - text: Powered by
+            - link "Esri" [ref=f2e23] [cursor=pointer]:
+              - /url: https://www.esri.com/
+        - generic [ref=f2e25] [cursor=pointer]:
+          - generic "Zoom in" [ref=f2e26]:
+            - generic:
+              - button "Zoom in" [disabled]
+          - generic "Zoom out" [ref=f2e27]:
+            - generic:
+              - button "Zoom out" [disabled]
+      - alert [ref=f2e33]: Set "trailLayerUrl" in public/app-config.json.
+    - article [ref=f2e39]:
+      - generic [ref=f2e41]:
+        - generic [ref=f2e42]: Trail details
+        - generic [ref=f2e47] [cursor=pointer]:
+          - button "Close trail details" [ref=f2e48]
+          - region "Close trail details" [ref=f2e50]
+      - paragraph [ref=f2e53]: Select a trail on the map to inspect it.

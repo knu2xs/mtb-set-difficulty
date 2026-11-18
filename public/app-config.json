@@ -1,0 +1,7 @@
+{
+  "trailLayerUrl": "https://services7.arcgis.com/K8yR1Uyu7G7B97k8/arcgis/rest/services/Black_Hills_OSM_Trails/FeatureServer/0",
+  "nameField": "name",
+  "difficultyField": "mtb_scale_imba",
+  "initialExtent": null,
+  "basemapWebMapItemId": "064fd02902764584b781ce4b5b145f80"
+}

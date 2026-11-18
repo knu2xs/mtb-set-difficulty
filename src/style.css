@@ -1,0 +1,118 @@
+:root {
+  font-family: "Avenir Next", Avenir, sans-serif;
+  color: #242424;
+  background: #f7f7f7;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html,
+body,
+calcite-shell,
+.map-workspace {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  min-width: 20rem;
+  overflow: hidden;
+}
+
+.map-workspace {
+  position: relative;
+}
+
+arcgis-map {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 20rem;
+}
+
+calcite-shell-panel {
+  --calcite-shell-panel-width: 21rem;
+  --calcite-shell-panel-min-width: 18rem;
+  --calcite-shell-panel-max-width: 30rem;
+}
+
+.trail-details-content {
+  padding: 1rem;
+}
+
+.trail-details-content h2 {
+  margin-block: 0 1rem;
+  font-size: 1.25rem;
+}
+
+.trail-details-content p {
+  display: grid;
+  gap: 0.35rem;
+}
+
+#trail-edit-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+#trail-edit-form[hidden],
+#trail-details[hidden],
+#trail-empty[hidden],
+#edit-trail[hidden] {
+  display: none;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#edit-message.error {
+  color: #8c1d18;
+}
+
+.open-details {
+  position: absolute;
+  z-index: 1;
+  top: 1rem;
+  right: 0.75rem;
+  padding: 0.5rem;
+  border: 1px solid #d6d6d6;
+  border-radius: 0.25rem;
+  background: #fff;
+}
+
+.app-status {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1;
+  max-width: min(32rem, calc(100vw - 2rem));
+  padding: 0.75rem 1rem;
+  border: 1px solid #d6d6d6;
+  border-radius: 0.25rem;
+  background: #fff;
+  box-shadow: 0 2px 8px #0002;
+  font-size: 0.875rem;
+}
+
+.app-status.error {
+  border-color: #b3261e;
+  color: #8c1d18;
+}
+
+@media (max-width: 40rem) {
+  calcite-shell-panel {
+    --calcite-shell-panel-width: min(21rem, calc(100vw - 2rem));
+  }
+
+  .app-status {
+    right: 0.5rem;
+    bottom: 3.25rem;
+    left: 0.5rem;
+    max-width: none;
+  }
+}

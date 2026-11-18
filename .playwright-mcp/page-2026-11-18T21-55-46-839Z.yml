@@ -1,0 +1,28 @@
+- generic [ref=e2]:
+  - generic [ref=e11]:
+    - heading "Mountain Bike Trails" [level=1] [ref=e12]
+    - generic [ref=e13]: Explore trails and contribute name and difficulty updates
+  - generic [ref=e14]:
+    - main [ref=e16]:
+      - generic "Mountain bike trail map" [ref=e17]:
+        - generic [ref=e19]:
+          - application [ref=e20]
+          - generic [ref=e22]:
+            - text: Powered by
+            - link "Esri" [ref=e23] [cursor=pointer]:
+              - /url: https://www.esri.com/
+        - generic [ref=e25] [cursor=pointer]:
+          - generic "Zoom in" [ref=e26]:
+            - generic:
+              - button "Zoom in" [disabled]
+          - generic "Zoom out" [ref=e27]:
+            - generic:
+              - button "Zoom out" [disabled]
+      - status [ref=e28]: Loading trail map configuration…
+    - article [ref=e34]:
+      - generic [ref=e36]:
+        - generic [ref=e37]: Trail details
+        - generic [ref=e42] [cursor=pointer]:
+          - button "Close trail details" [ref=e43]
+          - region "Close trail details" [ref=e45]
+      - paragraph [ref=e48]: Click a trail on the map to view it and submit updates.

@@ -8,5 +8,7 @@ export default defineConfig({
   },
   build: {
     outDir: "dist",
+    // Lightning CSS currently rewrites Calcite's light-dark() tokens incorrectly.
+    cssMinify: "esbuild",
   },
 });

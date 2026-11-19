@@ -1,4 +1,4 @@
-import { describe, expect, it, vi } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import {
   ConfigurationError,
   loadAppConfig,
@@ -84,13 +84,18 @@ describe("parseAppConfig", () => {
 });
 
 describe("loadAppConfig", () => {
-  it("loads and validates the public JSON configuration", async () => {
+  afterEach(() => {
+    vi.unstubAllEnvs();
+  });
+
+  it.each(["/", "/mtb-set-difficulty/"])("loads the public JSON configuration under %s", async (base) => {
+    vi.stubEnv("BASE_URL", base);
     const fetcher = vi.fn<typeof fetch>().mockResolvedValue(
       new Response(JSON.stringify(validConfig), { status: 200 }),
     );
 
     await expect(loadAppConfig(fetcher)).resolves.toMatchObject(validConfig);
-    expect(fetcher).toHaveBeenCalledWith("/app-config.json");
+    expect(fetcher).toHaveBeenCalledWith(`${base}app-config.json`);
   });
 
   it("reports a missing configuration file", async () => {

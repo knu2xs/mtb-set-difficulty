@@ -126,7 +126,7 @@ export function parseAppConfig(value: unknown): AppConfig {
 export async function loadAppConfig(
   fetcher: typeof fetch = fetch,
 ): Promise<AppConfig> {
-  const response = await fetcher("/app-config.json");
+  const response = await fetcher(`${import.meta.env.BASE_URL}app-config.json`);
   if (!response.ok) {
     throw new ConfigurationError(
       `Could not load public/app-config.json (HTTP ${response.status}).`,

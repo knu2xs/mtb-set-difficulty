@@ -31,6 +31,32 @@ npm test
 npm run build
 ```
 
+## GitHub Pages
+
+The [Build and deploy GitHub Pages](./.github/workflows/pages.yml) workflow runs
+on pushes to `main`. To start it manually, open **Actions > Build and deploy
+GitHub Pages > Run workflow** and select a branch containing the workflow.
+The workflow must be on the default branch before GitHub offers manual runs.
+Manual runs from branches other than `main` build only.
+
+Publishing is off by default. After completing the
+[ArcGIS Online service prerequisites](#arcgis-online-service-prerequisites)
+and public-release checklist:
+
+1. In **Settings > Pages**, set **Source** to **GitHub Actions**.
+2. In **Settings > Environments > github-pages**, restrict deployment branches
+   to `main`.
+3. In **Settings > Secrets and variables > Actions > Variables**, create the
+   repository variable `PAGES_PUBLISH_ENABLED` with value `true`.
+
+After setup, a push to `main` or a manual run from `main` publishes the
+successful build. Open the deployment link in the workflow run to verify
+the site. To stop future deployments, remove `PAGES_PUBLISH_ENABLED` or set
+it to `false`; unpublish the site separately in Pages settings if it must
+be taken offline. To roll back the site, revert the faulty change on `main`
+and let the workflow deploy the reverted revision. This does not undo
+edits made to trails.
+
 ## Public configuration
 
 `public/app-config.json` is downloaded by every browser visitor. It must not

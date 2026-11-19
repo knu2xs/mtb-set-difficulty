@@ -28,4 +28,4 @@ None.
 - New ArcGIS Maps SDK for JavaScript and Calcite dependencies.
 - Public ArcGIS Online hosted feature layer or appropriately configured layer view; the configured service URL, schema, and domain are validated at runtime.
 - Anonymous edits are direct and live. The client cannot authenticate or reliably identify contributors; service permissions, direct-request tests, recovery, and owner review are release prerequisites.
-- Hosting, monitoring, source trail dataset, and production release validation remain to be decided. The app uses the complete public "Black_Hills_AOI" web map item `064fd02902764584b781ce4b5b145f80`, including its AOI operational group.
+- The application is hosted on GitHub Pages and built and deployed using GitHub Actions. Monitoring, source trail dataset, and production release validation remain to be decided. The app uses the complete public "Black_Hills_AOI" web map item `064fd02902764584b781ce4b5b145f80`, including its AOI operational group.

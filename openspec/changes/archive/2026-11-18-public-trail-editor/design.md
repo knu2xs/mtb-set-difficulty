@@ -150,9 +150,9 @@ completed until a representative layer is available.
 3. Configure public service permissions and field restrictions. Verify
    anonymous queries, permitted updates, rejected add/delete/geometry/other
    field edits, invalid domain codes, and recovery using safe test records.
-4. Deploy the application to the selected host only after the actual service
-   passes the release gate. Verify the deployed app at desktop and mobile
-   viewport sizes.
+4. Deploy the application to GitHub Pages using GitHub Actions only after the
+   actual service passes the release gate. Verify the deployed app at desktop
+   and mobile viewport sizes.
 5. To roll back the web app, redeploy the previous static build or disable the
    public application. This does not undo edits already made directly to the
    service; recover data using the service owner's tested backup/restore
@@ -165,7 +165,6 @@ completed until a representative layer is available.
   names, and are difficulty domains subtype-specific?
 - Which basemap and initial extent should be used, and are they accessible
   anonymously under the intended licensing and usage terms?
-- Which static host and deployment process will be used?
 - Who owns service administration, edit review, monitoring, and data recovery?
 - Does the target ArcGIS Online organization permit the intended anonymous
   editing configuration, and does it enforce the required field and domain

@@ -31,10 +31,18 @@ arcgis-map {
   min-height: 20rem;
 }
 
+arcgis-zoom {
+  background-color: #fff;
+}
+
 calcite-shell-panel {
   --calcite-shell-panel-width: 21rem;
   --calcite-shell-panel-min-width: 18rem;
   --calcite-shell-panel-max-width: 30rem;
+}
+
+#details-shell-panel > calcite-panel {
+  background-color: #f7f7f7;
 }
 
 .trail-details-content {

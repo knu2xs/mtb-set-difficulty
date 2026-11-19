@@ -13,5 +13,5 @@
 
 ## 3. Verify the GitHub rollout
 
-- [ ] 3.1 With publishing disabled, verify a push to `main` and a manual dispatch start successful build-only runs. Verify a non-main push does not invoke this workflow and a manual non-main run does not publish.
-- [ ] 3.2 Once the existing public release checks pass and a maintainer enables publishing, verify that a push to `main` and a manual dispatch from `main` each publish and expose the project URL. Confirm a manual non-main run does not change the live site and smoke-test page, bundle, and configuration loading at the deployed URL.
+- [x] 3.1 With publishing disabled, verify a push to `main` and a manual dispatch start successful build-only runs. Verify a non-main push does not invoke this workflow and a manual non-main run does not publish.
+- [x] 3.2 Once the existing public release checks pass and a maintainer enables publishing, verify that a push to `main` and a manual dispatch from `main` each publish and expose the project URL. Confirm a manual non-main run does not change the live site and smoke-test page, bundle, and configuration loading at the deployed URL.
